@@ -1,0 +1,195 @@
+
+.navbar {
+  background-color: #333;
+  /* background: red; */
+
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  height: 70px;
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+}
+.navbar-items {
+  display: flex;
+  gap: 20px;
+}
+.navbar-items a {
+  text-decoration: none;
+  font-size: 25px;
+}
+.navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.navbar-logo a {
+  text-decoration: none;
+}
+.login {
+  display: flex;
+}
+.login button {
+  width: 140px;
+  height: 40px;
+  border: 1px solid;
+  border-radius: 2rem;
+  margin-right: 16px;
+  margin-top: 8px;
+}
+.login .cart {
+  font-size: 35px;
+  margin-top: 8px;
+  margin-right: 8px;
+}
+
+.menu-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  left: 3rem;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    margin-top: 10px;
+    padding-right: 0;
+  }
+  .menu-icon {
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  .sidebar {
+    display: block;
+  }
+  .navbar-items {
+    display: none;
+  }
+  .login {
+    right: 2rem;
+  }
+  .login .cart {
+    margin-top: 15px;
+    font-size: 30px;
+  }
+  .login button {
+    width: 100px;
+    height: 42px;
+    border: 1px solid;
+    border-radius: 1rem;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .navbar-container {
+    padding: 0 20px;
+  }
+
+  .navbar-logo .sell {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 498px) {
+  .menu-icon {
+    display: block;
+    font-size: 20px;
+  }
+  .sidebar {
+    display: block;
+  }
+  .navbar-items {
+    display: none;
+  }
+  .login {
+    right: 2rem;
+  }
+  .login button {
+    width: 90px;
+    height: 33px;
+    border: 1px solid;
+    border-radius: 1rem;
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+  .login .cart {
+    font-size: 28px;
+    margin-top: 16px;
+  }
+
+  .navbar-container {
+    padding-right: 0;
+  }
+
+  .navbar-logo .sell {
+    font-size: 25px;
+  }
+}
+
+/* sidebar css  */
+
+.sidebar {
+  background-color: #111111;
+  color: #fff;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  /* width: 100%; */
+  width: 80%;
+  height: 100%;
+  padding: 20px;
+  display: none;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+  flex-direction: column;
+  text-align: center;
+}
+
+.sidebar.open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateX(0);
+}
+
+.sidebar .wrap {
+  position: fixed;
+  top: 5rem;
+}
+.close-icon {
+  font-size: 3rem;
+  cursor: pointer;
+  position: fixed;
+  top: 0.3rem;
+  right: 5rem;
+  
+  font-weight: 600;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  margin-bottom: 25px;
+}
+
+.sidebar-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
